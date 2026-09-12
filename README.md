@@ -25,8 +25,9 @@ jupyter notebook "Anthropic 1P/"
 
 Select the **"Prompt Eng"** kernel when opening any notebook.
 
-> The venv already has `anthropic` (latest), `jupyter`, `notebook`, `ipykernel`, and `pickleshare` installed.  
-> To install from scratch: `pip install -r requirements.txt`
+> The venv already has everything installed. To build it from scratch: `pip install -r requirements.txt`
+> — which pins `anthropic==1.5.0` and `python-dotenv==1.2.3` (the notebook helpers depend on those
+> exact APIs) and sets version floors for `jupyter`, `notebook`, `ipykernel`, and `pickleshare`.
 
 ### Option B – Amazon Bedrock
 

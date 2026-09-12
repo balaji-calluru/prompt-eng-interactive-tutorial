@@ -1,6 +1,11 @@
-anthropic
-python-dotenv
-jupyter
-notebook
-ipykernel
-pickleshare
+# Pinned: the notebooks depend on these exact APIs.
+# anthropic 1.x moved temperature/top_p/top_k out of the typed messages.create()
+# signature, so the helpers pass extra_body={"temperature": 0.0} instead.
+anthropic==1.5.0
+python-dotenv==1.2.3
+
+# Notebook tooling: floors, not pins - newer versions are fine.
+jupyter>=1.1.1
+notebook>=7.6.2
+ipykernel>=7.3.0
+pickleshare>=0.7.5  # required for %store / %store -r across notebooks
